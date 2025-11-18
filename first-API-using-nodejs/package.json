@@ -1,0 +1,24 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "A simple Task Management REST API built with Node.js and Express.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devzadeofficial/nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devzadeofficial/nodejs/issues"
+  },
+  "homepage": "https://github.com/devzadeofficial/nodejs#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
