@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Learn Node.js basics",
+    "completed": true
+  },
+  {
+    "id": 2,
+    "title": "Build REST API with Express",
+    "completed": true
+  },
+  {
+    "id": 3,
+    "title": "Add database integration",
+    "completed": false
+  },
+  {
+    "id": 4,
+    "title": "Implement user authentication",
+    "completed": false
+  },
+  {
+    "id": 5,
+    "title": "Write unit tests",
+    "completed": false
+  }
+]
