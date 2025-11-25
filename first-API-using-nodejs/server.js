@@ -79,8 +79,8 @@ app.get("/", (req, res) => {
  *
  * Query Parameters:
  *   - filter: Filter by completion status (completed, pending, all)
- *     Example: GET /tasks?filter=completed
- *     Example: GET /tasks?filter=pending
+ *     Example: GET /tasks?status=completed
+ *     Example: GET /tasks?status=pending
  *
  * Response: { success: true, count: number, data: [] }
  */
@@ -164,6 +164,14 @@ app.get("/tasks/:id", (req, res) => {
  * Response: { success: true, message: string, data: {} }
  */
 app.post("/tasks", (req, res) => {
+  // Validation: Check if request body exists
+  if (!req.body || Object.keys(req.body).length === 0) {
+    return res.status(400).json({
+      success: false,
+      message: "Request body is required",
+    });
+  }
+
   const { title } = req.body;
 
   // Validation: Ensure title is provided and not empty

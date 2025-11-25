@@ -12,8 +12,10 @@ A simple Task Management REST API built with Node.js and Express.
 
 ## Prerequisites
 
-- Node.js (v14 or higher)
-- npm
+- Node.js (v14 or higher) Link: https://nodejs.org/en
+- GIT Link - https://git-scm.com/install/
+- Postman - Link: https://www.postman.com/downloads/
+- VS Code - Link: https://code.visualstudio.com/download
 
 ## Installation
 
@@ -26,6 +28,7 @@ A simple Task Management REST API built with Node.js and Express.
 ## Usage
 
 Start the server:
+
 ```bash
 node server.js
 ```
@@ -41,6 +44,7 @@ GET /tasks
 ```
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -62,6 +66,7 @@ POST /tasks
 ```
 
 **Request Body:**
+
 ```json
 {
   "title": "Your task title"
@@ -69,6 +74,7 @@ POST /tasks
 ```
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -93,11 +99,13 @@ nodejs/
 ## Testing with cURL
 
 **Get all tasks:**
+
 ```bash
 curl http://localhost:3000/tasks
 ```
 
 **Create a new task:**
+
 ```bash
 curl -X POST http://localhost:3000/tasks \
   -H "Content-Type: application/json" \
