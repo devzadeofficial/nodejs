@@ -87,19 +87,19 @@ app.get("/", (req, res) => {
 app.get("/tasks", (req, res) => {
   try {
     let tasks = loadTasks();
-    const { filter } = req.query;
+    const { status } = req.query;
 
     // Apply filter if provided
-    if (filter) {
-      if (filter === "completed") {
+    if (status) {
+      if (status === "completed") {
         tasks = tasks.filter((task) => task.completed === true);
-      } else if (filter === "pending") {
+      } else if (status === "pending") {
         tasks = tasks.filter((task) => task.completed === false);
-      } else if (filter !== "all") {
+      } else if (status !== "all") {
         // Invalid filter value
         return res.status(400).json({
           success: false,
-          message: "Invalid filter value. Use 'completed', 'pending', or 'all'",
+          message: "Invalid status value. Use 'completed', 'pending', or 'all'",
         });
       }
     }
@@ -107,7 +107,7 @@ app.get("/tasks", (req, res) => {
     res.json({
       success: true,
       count: tasks.length,
-      filter: filter || "all",
+      status: status || "all",
       data: tasks,
     });
   } catch (err) {
